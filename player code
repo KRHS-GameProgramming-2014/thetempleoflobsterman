@@ -1,0 +1,7 @@
+import pygame
+from Ball import Ball
+
+class PlayerBall (ball):
+	def__init__(self, pos):
+		Ball.__init__(self, "brian steel2.png", [0,0], pos)
+						
