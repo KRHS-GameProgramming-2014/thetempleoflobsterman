@@ -3,21 +3,21 @@ from Ball import Ball
 
 class PlayerBall (ball):
     def__init__(self, pos):
-       Ball.__init__(self, "objects/player/brian steel.png", [0,0], pos)
-       self.upImages = [pygame.image.load("objects/player/brian steel.PNG"),
-                        pygame.image.load("objects/player/brian steel2.PNG"),
-                        pygame.image.load("objects/player/brian steel3.PNG")]
+       Ball.__init__(self, "objects/player/briansteel.png", [0,0], pos)
+       self.upImages = [pygame.image.load("objects/player/briansteelup1.PNG"),
+                        pygame.image.load("objects/player/briansteelup2.PNG"),
+                        pygame.image.load("objects/player/briansteelup3.PNG")]
         
-       self.downImages = [pygame.image.load("objects/player/brian steeldown.PNG"),
-                          pygame.image.load("objects/player/brian steel2down.PNG"),
-                          pygame.image.load("objects/player/brian steel3down.PNG")]
+       self.downImages = [pygame.image.load("objects/player/briansteeldown1.PNG"),
+                          pygame.image.load("objects/player/briansteeldown2.PNG"),
+                          pygame.image.load("objects/player/briansteeldown3.PNG")]
         
-       self.leftImages = [pygame.image.load("objects/player/brian steelleft.PNG"),
-                          pygame.image.load("objects/player/brian steel2left.PNG"),
-                          pygame.image.load("objects/player/brian steel3left.PNG")]
+       self.leftImages = [pygame.image.load("objects/player/briansteelleft1.PNG"),
+                          pygame.image.load("objects/player/briansteelleft2.PNG"),
+                          pygame.image.load("objects/player/briansteelleft3.PNG")]
 
-       self.rightImages = [pygame.image.load("objects/player/brian steelright.PNG"),
-                           pygame.image.load("objects/player/brian steel2right.PNG"),
-                           pygame.image.load("objects/player/brian steel3down.PNG")]
+       self.rightImages = [pygame.image.load("objects/player/briansteelright1.PNG"),
+                           pygame.image.load("objects/player/briansteelright2.PNG"),
+                           pygame.image.load("objects/player/briansteelright3.PNG")]
         
        
