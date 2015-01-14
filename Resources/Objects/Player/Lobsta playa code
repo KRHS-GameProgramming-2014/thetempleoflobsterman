@@ -1,0 +1,24 @@
+import pygame
+from Ball import Ball
+
+class PlayerBall (ball):
+    def__init__(self, pos):
+       Ball.__init__(self, "objects/player/briansteel.png", [0,0], pos)
+       self.upImages = [pygame.image.load("objects/player/briansteelup1.PNG"),
+                        pygame.image.load("objects/player/briansteelup2.PNG"),
+                        pygame.image.load("objects/player/briansteelup3.PNG")]
+        
+       self.downImages = [pygame.image.load("objects/player/briansteeldown1.PNG"),
+                          pygame.image.load("objects/player/briansteeldown2.PNG"),
+                          pygame.image.load("objects/player/briansteeldown3.PNG")]
+        
+       self.leftImages = [pygame.image.load("objects/player/briansteelleft1.PNG"),
+                          pygame.image.load("objects/player/briansteelleft2.PNG"),
+                          pygame.image.load("objects/player/briansteelleft3.PNG")]
+
+       self.rightImages = [pygame.image.load("objects/player/briansteelright1.PNG"),
+                           pygame.image.load("objects/player/briansteelright2.PNG"),
+                           pygame.image.load("objects/player/briansteelright3.PNG")]
+        
+       
+	   self.upstabImages = [pygame.image.load("objects/player/stabup
