@@ -21,4 +21,18 @@ class PlayerBall (ball):
                            pygame.image.load("objects/player/briansteelright3.PNG")]
         
        
-	   self.upstabImages = [pygame.image.load("objects/player/stabup
+	   self.upstabImages = [pygame.image.load("objects/player/stabup.PNG"),
+							pygame.image.load("objects/player/stabup2.PNG"),
+							pygame.image.load("objects/player/stabup3.PNG")]
+	   
+	   self.downstabImages = [pygame.image.load("objects/player/stabdown.PNG"),
+							 [pygame.image.load("objects/player/stabdown2.PNG"),
+							 [pygame.image.load("objects/player/stabdown3.PNG")]
+							 
+	   self.rightstabImages = [pygame.image.load("objects/player/stabright1.PNG"),
+							  [pygame.image.load("objects/player/stabright2.PNG"),
+							  [pygame.image.load("objects/player/stabright3.PNG")]
+							  
+	   self.leftstabImages = [pygame.image.load("objects/player/stableft1.PNG"),
+							 [pygame.image.load("objects/player/stableft2.PNG"),
+							 [pygame.image.load("objects/player/stableft3.PNG")]
