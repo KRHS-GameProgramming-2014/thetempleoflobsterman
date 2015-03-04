@@ -27,7 +27,6 @@ class Player():
                             pygame.image.load("Resources/Objects/Player/playerpainleft.PNG"),
                             pygame.image.load("Resources/Objects/Player/playerpainright.PNG"),
                             pygame.image.load("Resources/Objects/Player/playerpainup.PNG")]                  
-        self.run = [pygame.image.load("Resources/Objects/Player/runn.PNG")]
         self.stabdown = [pygame.image.load("Resources/Objects/Player/stabdown.PNG"),
                             pygame.image.load("Resources/Objects/Player/stabdown2.PNG"),
                             pygame.image.load("Resources/Objects/Player/stabdown3.PNG")]
