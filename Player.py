@@ -142,7 +142,7 @@ class Player():
             self.facing = "left"
             self.changed = True
             self.speedx = -self.maxSpeed
-7            self.speedx = 0
+            self.speedx = 0
 
     def distance(self, pt):
         x1 = self.rect.center[0]
