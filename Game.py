@@ -12,7 +12,7 @@ size = width, height
 bgColor = r,g,b = 0, 0, 0
 
 screen = pygame.display.set_mode(size)
-bgImage = pygame.image.load("Resources/Objects/Backgrounds/dungeon are lvl 1.PNG")
+bgImage = pygame.image.load("dungeon are lvl 1.PNG")
 bgRect = bgImage.get_rect()
 
 walls = [Wall([0,0],[338,68]),
