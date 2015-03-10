@@ -17,9 +17,8 @@ class Player():
         self.upImages = [pygame.image.load("Resources/Objects/Player/Briansteelup1.PNG"),
                             pygame.image.load("Resources/Objects/Player/Briansteelup2.PNG"),
                             pygame.image.load("Resources/Objects/Player/Briansteelup3.PNG")]
-        self.control = [pygame.image.load("Resources/Objects/Player/capture.PNG"),
-                            pygame.image.load("Resources/Objects/Player/capture3.PNG"),
-                            pygame.image.load("Resources/Objects/Player/capture4.PNG")]                  
+        self.control = [pygame.image.load("Resources/Objects/Player/Capture3.PNG"),
+                            pygame.image.load("Resources/Objects/Player/Capture4.PNG")]                  
         self.heart = [pygame.image.load("Resources/Objects/Player/emptyheart.PNG"),
                             pygame.image.load("Resources/Objects/Player/halfheart.PNG"),
                             pygame.image.load("Resources/Objects/Player/heart.PNG"),
