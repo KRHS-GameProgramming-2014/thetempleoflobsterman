@@ -52,7 +52,8 @@ class Player():
         self.maxSpeed = 5  
         self.speedx = 0
         self.speedy = 0
-        self.speed = [self.speedx, self.speedy]             
+        self.speed = [self.speedx, self.speedy]
+        self.attacking = False             
 
     def update(self, width, height):
         self.didBounceX = False
@@ -89,16 +90,30 @@ class Player():
                 self.frame += 1
             else:
                 self.frame = 0
+                if self.attacking:
+                    self.attacking = False
         
         if self.changed:    
             if self.facing == "up":
-                self.images = self.upImages
+                if self.attacking:
+                    self.images = self.stabup
+                else:
+                    self.images = self.upImages
             elif self.facing == "down":
-                self.images = self.downImages
+                if self.attacking:
+                    self.images = self.stabdown
+                else:
+                    self.images = self.downImages
             elif self.facing == "right":
-                self.images = self.rightImages
+                if self.attacking:
+                    self.images = self.stabright
+                else:
+                    self.images = self.rightImages
             elif self.facing == "left":
-                self.images = self.leftImages
+                if self.attacking:
+                    self.images = self.stableft
+                else:
+                    self.images = self.leftImages
             
             self.image = self.images[self.frame]
     
@@ -118,6 +133,13 @@ class Player():
                     #print "hit Ball"
     
     def go(self, direction):
+        if direction == "attack":
+            self.changed = True
+            self.speedx = 0
+            self.speedy = 0
+            self.attacking = True
+            self.frame = 0
+            self.waitCount = 0
         if direction == "up":
             self.facing = "up"
             self.changed = True

@@ -47,7 +47,7 @@ walls = [Wall([0,0],[338,68]),
          Wall([754,293],[943,322]),
          Wall([745,260],[783,286]),
          Wall([658,455],[752,482]),
-         ] 
+         Wall([754,425],[781,608]),] 
          
 player = Player([25,245])        
          #100 #100
@@ -64,6 +64,8 @@ while True:
                 player.go("down")
             if event.key == pygame.K_a or event.key == pygame.K_LEFT:
                 player.go("left")
+            if event.key == pygame.K_x:
+                player.go("attack")
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_w or event.key == pygame.K_UP:
                 player.go("stop up")
