@@ -1,26 +1,26 @@
 import pygame
 
 class Base():
-     def __init__(image, speed=[10,10], pos)
-         image.upImages = [pygame.image.load("Resources/Objects/Enemy/skeleu.PNG")]
-         
-         image.leftImages = [pygame.image.load("Resources/Objects/Enemy/skelel1.PNG")]
-         
-         image.rightImages = [pygame.image.load("Resources/Objects/Enemy/skeler2.PNG")]
-         
-         image.downImages = [pygame.image.load("Resources/Objects/Enemy/skeled.PNG")]
-         
-         image.facing = "up"
-         image.changed = False
-         image.images = image.upImages
-         image.frame = 0
-         image.maxFrame = len(image.images) - 1
-         image.waitCount = 0
-         image.maxWait = 60*.25
-         image.maxSpeed = 7
-         image.speedx = 6
-         image.speedy = 6
-         image.speed = [image.speedx, image.speedy]
+    def __init__(image, pos, speed=[10,10]):
+		image.upImages =    [pygame.Image.load("Resources/Objects/Enemy/skeleu.PNG")]
+
+		image.leftImages =  [pygame.Image.load("Resources/Objects/Enemy/skelel1.PNG")]
+
+		image.rightImages = [pygame.Image.load("Resources/Objects/Enemy/skeler2.PNG")]
+
+		image.downImages =  [pygame.Image.load("Resources/Objects/Enemy/skeled.PNG")]
+
+		image.facing = "up"
+		image.changed = False
+		image.Images = image.upImages
+		image.frame = 0
+		image.maxFrame = len(image.Images) - 1
+		image.waitCount = 0
+		image.maxWait = 60*.25
+		image.maxSpeed = 7
+		image.speedx = 6
+		image.speedy = 6
+		image.speed = [image.speedx, image.speedy]
          
     def update(image, width, height):
         image.didBounceX = False
@@ -34,7 +34,7 @@ class Base():
         image.speed = [image.speedx, image.speedy]
         image.rect = image.rect.move(image.speed)
         
-    def collideEdge(image, width, height):
+    def collideEdge(imagee, width, height):
         if not image.didBounceX:
             #print "trying to hit Wall"
             if image.rect.left < 0 or image.rect.right > width:
@@ -45,21 +45,21 @@ class Base():
             if image.rect.top < 0 or image.rect.bottom > height:
                 image.didBounceY = True
                 image.speedx = 0
-                #print "hit xWall"
+                #print "hit yWall"
                 
-        if image.changed:    
+        if Base.changed:    
             if image.facing == "up":
-                image.images = image.upImages
+                image.Images = image.upImages
             elif image.facing == "down":
-                image.images = image.downImages
+                image.Images = image.downImages
             elif image.facing == "right":
-                image.images = image.rightImages
+                image.Images = image.rightImages
             elif image.facing == "left":
-                image.images = image.leftImages
+                image.Images = image.leftImages
             
-            image.image = image.images[image.frame]
+            image.Image = image.Images[image.frame]
             
-    def collideWall(image, other):
+    def collideWall(Base, other):
         if image.rect.right > other.rect.left and image.rect.left < other.rect.right:
             if image.rect.bottom > other.rect.top and image.rect.top < other.rect.bottom:
                 if not image.didBounceX:
@@ -74,7 +74,7 @@ class Base():
                     image.didBounceY = True
                     #print "hit Ball"
                     
-    def distance(image, pt):
+    def distance(Base, pt):
         x1 = image.rect.center[0]
         y1 = image.rect.center[1]
         x2 = pt[0]
