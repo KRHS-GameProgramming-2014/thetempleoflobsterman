@@ -1,6 +1,7 @@
 import pygame, sys, random
 from Wall import Wall
 from Player import Player
+from Enemy2 import Enemy
 pygame.init()
 
 clock = pygame.time.Clock()
@@ -50,7 +51,9 @@ walls = [Wall([0,0],[338,68]),
          Wall([754,425],[781,608]),] 
          
 player = Player([25,245])        
-         #100 #100
+        #100 #100
+enemy  = Enemy([330,325])
+        #100 #100
 
 while True:
     for event in pygame.event.get():
@@ -77,8 +80,11 @@ while True:
                 player.go("stop left")
     player.update(width, height)
     
+    enemy.update(width, height)
+    
     for wall in walls:
         player.collideWall(wall)
+        enemy.collideWall(wall)
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -86,6 +92,7 @@ while True:
     for wall in walls:
         screen.blit(wall.image, wall.rect)
     screen.blit(player.image, player.rect)
+    screen.blit(enemy.image, enemy.rect)
     pygame.display.flip()
     clock.tick(60)
 bgColor = r,g,b

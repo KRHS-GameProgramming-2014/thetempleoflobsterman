@@ -17,13 +17,13 @@ class Player():
         self.upImages = [pygame.image.load("Resources/Objects/Player/Briansteelup1.PNG"),
                             pygame.image.load("Resources/Objects/Player/Briansteelup2.PNG"),
                             pygame.image.load("Resources/Objects/Player/Briansteelup3.PNG")]
-        self.control = [pygame.image.load("Resources/Objects/Player/capture3.PNG"),
+        self.control =  [pygame.image.load("Resources/Objects/Player/capture3.PNG"),
                             pygame.image.load("Resources/Objects/Player/capture4.PNG")]                  
-        self.heart = [pygame.image.load("Resources/Objects/Player/emptyheart.PNG"),
+        self.heart =    [pygame.image.load("Resources/Objects/Player/emptyheart.PNG"),
                             pygame.image.load("Resources/Objects/Player/halfheart.PNG"),
                             pygame.image.load("Resources/Objects/Player/heart.PNG"),
                             pygame.image.load("Resources/Objects/Player/onethirdheart.PNG")]
-        self.pain = [pygame.image.load("Resources/Objects/Player/playerpaindown.PNG"),
+        self.pain =     [pygame.image.load("Resources/Objects/Player/playerpaindown.PNG"),
                             pygame.image.load("Resources/Objects/Player/playerpainleft.PNG"),
                             pygame.image.load("Resources/Objects/Player/playerpainright.PNG"),
                             pygame.image.load("Resources/Objects/Player/playerpainup.PNG")]                  
@@ -33,10 +33,10 @@ class Player():
         self.stableft = [pygame.image.load("Resources/Objects/Player/stableft1.PNG"),
                             pygame.image.load("Resources/Objects/Player/stableft2.PNG"),
                             pygame.image.load("Resources/Objects/Player/stableft3.PNG")]
-        self.stabright = [pygame.image.load("Resources/Objects/Player/stabright1.PNG"),
+        self.stabright =[pygame.image.load("Resources/Objects/Player/stabright1.PNG"),
                             pygame.image.load("Resources/Objects/Player/stabright2.PNG"),
                             pygame.image.load("Resources/Objects/Player/stabright3.PNG")]
-        self.stabup = [pygame.image.load("Resources/Objects/Player/stabup.PNG"),
+        self.stabup =   [pygame.image.load("Resources/Objects/Player/stabup.PNG"),
                             pygame.image.load("Resources/Objects/Player/stabup2.PNG"),
                             pygame.image.load("Resources/Objects/Player/stabup3.PNG")]
         self.knifethrowing = [pygame.image.load("Resources/Objects/Player/throwing knife.PNG")]                                         
