@@ -52,7 +52,9 @@ walls = [Wall([0,0],[338,68]),
          
 player = Player([25,245])        
         #100 #100
-enemy  = Enemy([330,325])
+enemies  = [Enemy([330,325]),
+			Enemy([740,400]),
+			Enemy([630,225])]
         #100 #100
 
 while True:
@@ -80,11 +82,13 @@ while True:
                 player.go("stop left")
     player.update(width, height)
     
-    enemy.update(width, height)
+    for enemy in enemies:
+		enemy.update(width, height)
     
     for wall in walls:
         player.collideWall(wall)
-        enemy.collideWall(wall)
+        for enemy in enemies:
+			enemy.collideWall(wall)
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -92,7 +96,8 @@ while True:
     for wall in walls:
         screen.blit(wall.image, wall.rect)
     screen.blit(player.image, player.rect)
-    screen.blit(enemy.image, enemy.rect)
+    for enemy in enemies:
+		screen.blit(enemy.image, enemy.rect)
     pygame.display.flip()
     clock.tick(60)
 bgColor = r,g,b

@@ -1,7 +1,7 @@
 import pygame
 
 class Enemy():
-    def __init__(self, pos, speed=[1,1]):
+    def __init__(self, pos, speed=[1,3]):
         self.upImages =    [pygame.image.load("Resources/Objects/Enemy/skeleu.PNG")]
 
         self.leftImages =  [pygame.image.load("Resources/Objects/Enemy/skelel3.PNG")]
